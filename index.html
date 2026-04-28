@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center><h3 id="time"></h3></center>
+  <!-- login form -->
+   <div id="login">
+   <div class="login-wrapper">
+        <div class="login-header">
+            Login Form
+        </div>
+        <div class="login-form">
+            <label for="username">Username *</label>
+            <input type="text" id="user"  placeholder="Enter your Username"  />
+
+            <label for="password">Password *</label>
+            <input type="password" id="password"  placeholder="Enter your Password" required />
+
+            <div class="remember">
+                <input type="checkbox" id="remember" name="remember" style="margin-right: 8px;">
+                <label for="remember">password show</label>
+            </div>
+
+            <button onclick="login_usar()">LOGIN</button>
+        </div>
+
+    </div>
+  </div>
+<!-- login from end -->
+
+<!-- form user data get -->
+    <div id="form_main">
+    <form method="post" name='google-sheet'>
+      <div id="form" name="">
+          <input type="number"  placeholder="Enter a roll_no" id="roll" required  class="input_info" name="Roll No"><br> <br>
+          <input type="text"  placeholder="Enter your Name`" id="name" required  class="input_info" name="Name"><br><br>
+          <input type="text"  placeholder="Enter your father" id="f_name" required  class="input_info" name="Father Name"><br><br>
+          <input type="text"  placeholder="Enter course name" id="course" required class="input_info" name="Course"><br><br>
+          <input type="text" readonly id="feedback" class="input_info" name="Result">
+          <button type="submit" onclick="from_submit()"  id="info_submit" name="submit"  onclick="">submit </button>
+
+      </div>
+      </form>
+    </div>
+
+    <div id="sub_msg">
+    <center><h1>Thanks you! your exam finished</h1></center>  
+    </div>
+<!-- end input detials -->
+
+
+<!-- start quiz -->
+  <div id="quiz">
+    
+    <div id="main">
+        <div id="question"></div>
+    </div>
+    <center>
+    <Button class="btn" onclick="privious()"> Previous</Button>
+    <Button class="btn" onclick="next()">Next</Button>
+    
+</center>
+
+  </div>
+<!-- quiz end -->
+ 
+<!-- start how solov  -->
+<div id="hh_solov">
+  <div id="h_solov"></div>
+  <Button class="btn" onclick="submitQuiz()">Submit</Button>
+  
+</div>
+
+
+<!-- end how solov  -->
+  <div id="detail">
+  
+ <div id="info">
+    <h2 style="color:blue"> New Shakti College of IT & Management</h2>
+    <center>
+      <h3>Please read all Rule carefully</h3>
+      </center>
+    <ol>
+      <li>Aapke paas sabhi questions solve karne ke liye total (60 min) ka time diya gaya hai. Timer screen par display hoga.</li>
+      <li>Question ko dhyaan se padhein, phir correct option par click karein. Ek baar option select karne ke baad aap use change nahi kar sakte.</li>
+      <li>Quiz submit karne par ek form aayega. Kripya uske sabhi fields ko fill karein.</li>
+      <li>Aapne kitne questions solve kiye hain, ye quiz ke bottom mein dikhaya jayega. 
+      Green color wale questions solved hain aur red color wale unsolved hain.</li>
+      <li>Form fill karne ke baad submit button par click karein aur 10 second wait karein. 
+      Uske baad ek popup aayega, jisme OK par click karein.</li>
+      <li>Agar aapne sabhi rules dhyaan se padh liye hain, tab checkbox par click karein.</li>
+        <br><br>
+      <input type="checkbox" id="check_box"><br> <br>
+      <button id="info__btn" onclick="quiz_start()">Continue Test</button>
+    </ol>
+    <h4>Developed by shivam maurya (A'Level) <a href="https://shivamaurya768.github.io/My-portfolio-/" target="_blank">My portfolio </a></a></h2>
+
+    
+  </div>
+</div>
+  <script src="script.js"></script>
+  
+</html>
