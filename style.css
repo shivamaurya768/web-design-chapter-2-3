@@ -1,6 +1,8 @@
 body{
   background-color: rgb(149, 255, 223);
-
+  user-select: none;
+  -webkit-user-select: none; /* Chrome, Safari */
+  -ms-user-select: none;     /* IE */
 }
 #question{
     height:350px;
